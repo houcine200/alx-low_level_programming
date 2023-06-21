@@ -8,22 +8,16 @@
  */
 int main(void)
 {
-	unsigned long num1 = 0, num2 = 1, fibsum;
-	long int tot_sum;
+	long int a = 1, b = 2, c = 0, sum = 2;
 
-	while (1)
+	while (c <= 4000000)
 	{
-		fibsum = num1 + num2;
-		if (fibsum > 4000000)
-			break;
-
-		if ((fibsum % 2) == 0)
-			tot_sum += fibsum;
-
-		num1 = num2;
-		num2 = fibsum;
+		c = a + b;
+		a = b;
+		b = c;
+		if (c % 2 == 0)
+			sum += c;
 	}
-	printf("%.0f\n", tot_sum);
-
+	printf("%ld\n", sum);
 	return (0);
 }
