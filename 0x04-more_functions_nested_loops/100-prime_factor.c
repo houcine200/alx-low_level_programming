@@ -6,7 +6,7 @@
 int main (void)
 {
 	long int n = 612852475143;
-	long i;
+	long int i;
 
 	for (i = 2; i < n; i++)
 		for (;n % i == 0; n /= i)
