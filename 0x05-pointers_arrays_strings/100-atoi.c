@@ -17,8 +17,8 @@ int _atoi(char *s)
 		else if (s[0] >= '0' && s[0] <= '9')
 			num = (num * 10) + (s[0] - '0');
 
-		 else if (num > 0)
-			 break;
+		else if (num > 0)
+			break;
 	}
 	return (num * sign);
 }
