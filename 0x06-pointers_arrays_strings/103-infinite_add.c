@@ -34,9 +34,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			break;
 		m = n / 10;
 		r[k] = n % 10 + '0';
+	}
 		/* Step 5: Add null terminator at the end of the result */
 		r[k] = '\0';
-	}
 	/* Step 6: Check for any remaining digits or carry */
 	if (i >= 0 || j >= 0 || m != 0)
 		return (0);
