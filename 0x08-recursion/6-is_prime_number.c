@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * checker - checks recursively the input from is_prime_number
+  * detect - checks recursively the input from is_prime_number
   * @n: iterator
   * @b: base number to check
   * Return: 1 if n is a prime, else return 0 otherwise.
