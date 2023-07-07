@@ -3,7 +3,6 @@
 #include <ctype.h>
 /**
  * main - program adds positive numbers
- * Owned By MoOka
  * @argc: argument count
  * @argv: argument vector
  * Return: sum of numbers
