@@ -28,8 +28,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 
 	dest = strcat(dest, s1);
-	if (n >= strlen(s2)
-		dest = strcat(dest, s2)
+	if (n >= strlen(s2))
+		dest = strcat(dest, s2);
 	else
 		dest = strncat(dest, s2, n);
 	dest[len - 1] = '\0';
