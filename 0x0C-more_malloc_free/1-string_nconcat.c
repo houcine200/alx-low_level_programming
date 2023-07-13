@@ -27,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (dest == NULL)
 		return (NULL);
 
-	dest = strcat(dest, s1);
+	strcpy(dest, s1);
 	if (n >= strlen(s2))
 		dest = strcat(dest, s2);
 	else
