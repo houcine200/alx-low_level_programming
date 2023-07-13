@@ -24,7 +24,7 @@ int is_number(const char *str)
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2;
+	unsigned int num1, num2;
 
 	if (argc != 3 || !is_number(argv[1]) || !is_number(argv[2]))
 	{
