@@ -26,7 +26,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (dest == NULL)
 		return (NULL);
 
-	dest = memcpy(dest, s1, strlen(s1));
+	dest = strcat(dest, s1);
 	dest = strncat(dest, s2, n);
 	dest[len - 1] = '\0';
 
