@@ -24,7 +24,7 @@ int is_number(const char *str)
  */
 int main(int argc, char *argv[])
 {
-	unsigned int num1, num2;
+	unsigned int num1, num2, mul;
 
 	if (argc != 3 || !is_number(argv[1]) || !is_number(argv[2]))
 	{
@@ -35,6 +35,8 @@ int main(int argc, char *argv[])
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[2]);
 
-	printf("%d\n", num1 * num2);
+	mul = num1 * num2;
+
+	printf("%d\n", mul);
 	return (0);
 }
