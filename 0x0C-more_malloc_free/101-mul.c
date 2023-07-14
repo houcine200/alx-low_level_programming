@@ -9,12 +9,13 @@
 int is_number(const char *str)
 {
 	int i;
+
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (!isdigit(str[i]))
-			return 0;
+			return (0);
 	}
-	return 1;
+	return (1);
 }
 /**
  * main - main function
