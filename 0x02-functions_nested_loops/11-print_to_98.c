@@ -26,8 +26,9 @@ void print_to_98(int n)
             else if (i < 0)
             {
                 putchar('-');
-            if (-i >= 10)
-                putchar (-i / 10 + '0');
+            if (-i >= 100)
+                putchar(-i / 100 + '0');
+            putchar ((-i / 10) % 10 + '0');
             putchar (-i % 10 + '0');
 
 
@@ -58,5 +59,7 @@ void print_to_98(int n)
             if (i == 98)
                 putchar ('\n');
         }
+
+
 
 }
