@@ -8,17 +8,19 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dest = malloc(sizeof(dog_t));
+	dog_t *dest;
+
+	dest = malloc(sizeof(dog_t));
 
 	if (dest == NULL)
 		return (NULL);
 
-	dest->name = malloc(sizeof(strlen(name)) + 1);
+	dest->name = malloc(sizeof(char) * (strlen(name) + 1));
 
 	if (dest->name == NULL)
 		return (NULL);
 
-	dest->owner = malloc(sizeof(strlen(owner)) + 1);
+	dest->owner = malloc(sizeof(char) * (strlen(owner) + 1));
 
 	if (dest->owner == NULL)
 		return (NULL);
