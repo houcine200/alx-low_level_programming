@@ -18,7 +18,7 @@ struct dog
 /**
  * _dog - typedef for struct dog
  */
-typedef struct dog _dog;
+typedef struct dog dog_t;
 
 #include <stdio.h>
 #include <stddef.h>
