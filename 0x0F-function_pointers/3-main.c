@@ -8,36 +8,28 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, calc;
-	char *operator;
-	int (*ptr)(int, int);
+	int num1, num2, result;
+	int (*oper)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	operator = argv[2];
-	ptr = get_op_func(operator);
-
-	if (strcmp(argv[2], operator) != 0)
+	oper = get_op_func(argv[2]);
+	if (oper == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0) &&
-			atoi(argv[3]) == 0)
-
+	if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-
-	calc = ptr(num1, num2);
-	printf("%d\n", calc);
-
+	result = oper(num1, num2);
+	printf("%d\n", result);
 	return (0);
 }
