@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	operator = argv[2];
 	ptr = get_op_func(operator);
 
-	if (argv[2] != operator)
+	if (strcmp(argv[2], operator) != 0)
 	{
 		printf("Error\n");
 		exit(99);
