@@ -13,8 +13,12 @@ op_t ops[] = {
     };
 
     int i = 0;
-    int size = sizeof(ops)/sizeof(ops[0]);
 
-    while (i < size)
+    while (i < sizeof(ops)/sizeof(ops[0]))
     {
+	    if (s[i] != ops[i].op)
+		    return (NULL);
+	    return (s[i]);
+	    i++;
+    }
 
