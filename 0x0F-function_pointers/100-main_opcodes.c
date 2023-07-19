@@ -6,7 +6,7 @@
  * @argc: number of arguments
  * @argv: array of arguments
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
@@ -32,13 +32,12 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < nb; i++)
 	{
-		if (i =! (nb - 1))
-			printf("%02hhx ", ar[i]);
+		printf("%02hhx", ar[i]);
+
+		if (i != nb - 1)
+			printf(" ");
 		else
-		{
-			printf("%02hhx\n", ar[i]);
-			break;
-		}
+			printf("\n");
 	}
 	return (0);
 }
