@@ -13,7 +13,7 @@ void free_listint2(listint_t **head)
 	 * Check if head is already NULL (list is empty),
 	 * in which case there's nothing to free.
 	 */
-	if (*head == NULL)
+	if (head == NULL)
 		return;
 
 	while (*head)
