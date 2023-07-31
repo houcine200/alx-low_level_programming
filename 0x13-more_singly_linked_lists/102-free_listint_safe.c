@@ -10,13 +10,13 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t i = 0;
-	listint_t *current;
+	listint_t *curr;
 
-	while (*h != NULL)
+	while (*h)
 	{
-		current = *h;
+		curr = *h;
 		*h = (*h)->next;
-		free(current);
+		free(curr);
 		i++;
 	}
 
