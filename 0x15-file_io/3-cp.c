@@ -1,10 +1,10 @@
 #include "main.h"
-
 /**
- * main - Function that copies the content of one file to another
- * @argc: Amount of arguments
- * @argv: List of arguments
- * Return: 98, 99, or 100 if it fails, 0 if it works
+ * main - Entry point of the program. Copies the contents of one file to another.
+ * @argc: The number of arguments passed to the program.
+ * @argv: An array of strings containing the arguments passed to the program.
+ *
+ * Return: On success, returns 0. On failure, returns an appropriate error code.
  */
 int main(int argc, char **argv)
 {
@@ -76,4 +76,3 @@ int main(int argc, char **argv)
 
 	return (0);
 }
-
