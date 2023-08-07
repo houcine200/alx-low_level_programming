@@ -1,11 +1,10 @@
 #include "main.h"
 /**
-  * placeholder2 - define function
-  * @void: describe argument
-  * Return: 0 on success
-  */
-int placeholder2(void)
+* main- function that does nothing
+* Return: 0
+*/
+
+int main(void)
 {
 	return (0);
 }
-
