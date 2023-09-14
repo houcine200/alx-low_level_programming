@@ -8,45 +8,49 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-    dlistint_t *mid = malloc(sizeof(dlistint_t));
-    dlistint_t *curr, *after;
+	dlistint_t *mid = malloc(sizeof(dlistint_t));
+	dlistint_t *curr, *after;
 
 
-    if (!mid)
-        return NULL;
+	if (!mid)
+		return (NULL);
 
-    mid->n = n;
+	mid->n = n;
 
-    if(idx == 0)
-    {
-        mid->next = *h;
-        *h = mid;
-        return mid;
-    }
-    curr = *h;
+	if (idx == 0)
+	{
+		mid->next = *h;
+		*h = mid;
+		return (mid);
+	}
+	curr = *h;
 
-    for (; curr && idx != 1; idx--)
-        curr = curr->next;
+	for (; curr && idx != 1; idx--)
+		curr = curr->next;
 
-    if (!curr)
-    {
-        free(mid);
-        return NULL;
-    }
+	if (curr == NULL)
+	{
+		free(mid);
+		return (NULL);
+	}
+	mid->next = curr->next;
+	mid->prev = curr;
 
-   if (curr->next == NULL)
-   {
-       curr->next = mid;
-       mid->prev = curr;
-   }
-   else
-   {
-       after = curr->next;
-       curr->next = mid;
-       after->prev = mid;
-       mid->next = after;
-       mid->prev = curr;
-   }
+    
+        
+          
+    
 
-    return mid;
+        
+        Expand All
+    
+    @@ -42,5 +42,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+  
+	after = curr->next;
+	if (after)
+		after->prev = mid;
+
+	curr->next = mid;
+
+	return (mid);
 }
