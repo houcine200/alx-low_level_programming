@@ -36,16 +36,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	mid->next = curr->next;
 	mid->prev = curr;
 
-    
-        
-          
-    
-
-        
-        Expand All
-    
-    @@ -42,5 +42,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
-  
 	after = curr->next;
 	if (after)
 		after->prev = mid;
