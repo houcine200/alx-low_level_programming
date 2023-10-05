@@ -73,7 +73,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
         current = current->next;
     }
 
-    // If no matching key is found, add a new node to the linked list.
+    /* If no matching key is found, add a new node to the linked list. */
     if (add_node(&(ht->array[index]), key, value) == NULL)
         return (0);
 
