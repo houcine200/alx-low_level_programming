@@ -37,14 +37,14 @@ int binary_search_recursive(int *array, int low, int high, int value)
 }
 
 /**
- * binary_search - Binary search algorithm.
+ * advanced_binary - Binary search algorithm.
  * @array: Pointer to array.
  * @size: Number of elements in array.
  * @value: Value to find.
  *
  * Return: Index if found, else -1.
  */
-int binary_search(int *array, size_t size, int value)
+int advanced_binary(int *array, size_t size, int value)
 {
 	if (array == NULL)
 		return (-1);
