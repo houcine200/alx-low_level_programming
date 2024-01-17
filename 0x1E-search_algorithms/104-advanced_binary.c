@@ -26,14 +26,18 @@ int binary_search_recursive(int *array, int low, int high, int value)
 	}
 	mid = low + (high - low) / 2;
 
-	if (array[mid] == value)
-		return (mid);
+	if (array[low] == value)
+		return ((int)low);
 
-	else if (array[mid] > value)
-		return (binary_search_recursive(array, low, mid - 1, value));
-
-	else
-		return (binary_search_recursive(array, mid + 1, high, value));
+	if (array[low] != array[high])
+	{
+		if (array[mid] < value)
+			return (binary_search_recursive(array,
+							mid + 1, high, value));
+		if (array[mid] >= value)
+			return (binary_search_recursive(array,
+							low, mid, value));
+	}
 }
 
 /**
