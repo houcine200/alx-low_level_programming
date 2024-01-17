@@ -38,6 +38,7 @@ int binary_search_recursive(int *array, int low, int high, int value)
 			return (binary_search_recursive(array,
 							low, mid, value));
 	}
+	return (-1);
 }
 
 /**
